@@ -14,7 +14,7 @@ function MapComponent({ markerLocation }){
             geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)
           }
         </Geographies>
-        <Marker coordinates={[markerLocation.longitude, markerLocation.longitude]}>
+        <Marker coordinates={[markerLocation.longitude, markerLocation.latitude]}>
           <circle r={4} fill="#326ae3" />
         </Marker>
       </ComposableMap>
