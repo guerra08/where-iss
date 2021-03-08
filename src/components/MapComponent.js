@@ -7,7 +7,7 @@ function MapComponent({ markerLocation }){
 
   return(
     <div>
-      <ComposableMap projectionConfig={{ scale: 147 }}>
+      <ComposableMap projectionConfig={{ scale: 147 }} width={800} height={400} style={{ width: "100%", height: "auto" }}>
         <Graticule stroke="#8b97b0" />
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
@@ -15,7 +15,7 @@ function MapComponent({ markerLocation }){
           }
         </Geographies>
         <Marker coordinates={[markerLocation.longitude, markerLocation.latitude]}>
-          <circle r={4} fill="#326ae3" />
+          <circle r={3} fill="#326ae3" />
         </Marker>
       </ComposableMap>
     </div>

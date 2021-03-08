@@ -24,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <h1>Where ISS?</h1>
+      <h2>Find where the ISS is currently in relation to our planet 🌎</h2>
       {isLoading && <ClipLoader />}
       {!isLoading &&
         <>
