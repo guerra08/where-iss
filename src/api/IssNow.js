@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const host = 'http://api.open-notify.org';
+const host = 'https://api.wheretheiss.at/v1';
 
 export const getCurrentIssLocation = async () => {
-    const response = await axios.get(`${host}/iss-now`);
+    const response = await axios.get(`${host}/satellites/25544`);
     if(response.status !== 200)
         return false;
-    return response.data.iss_position;
+    return { latitude: response.data.latitude, longitude: response.data.longitude };
 }
